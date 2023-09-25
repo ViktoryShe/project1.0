@@ -1,0 +1,511 @@
+/*Обнуление*/
+*,
+*::before,
+*::after {
+ padding: 0;
+ margin: 0;
+ border: 0;
+ box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+/*-----------------Шрифты--------------------------------------------------*/
+
+@font-face {
+    font-family: 'TTLakesMed';
+    src: url('../fonts/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+        url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Medium.woff') format('woff'),
+        url('../fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TTLakesReg';
+    src: url('../fonts/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Regular.woff') format('woff'),
+        url('../fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TTLakesBold';
+    src: url('../fonts/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTLakes-Bold.woff') format('woff'),
+        url('../fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+/*-----------------------------------------------------------------------*/
+html,
+body {
+    height: 100%
+}
+body {
+    font-size: 16px;
+    color: black;
+    font-family: 'TTLakesReg', 'TTLakesMed','TTLakesBold';
+}
+.wrapper {
+    min-height: 504px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*------------------------------------------------------------------------*/
+[class*="__container"] {
+    max-width: auto;
+    margin: 0px auto;
+}
+/*--------шапка----------------------------------------------------------------*/
+.header {
+    width: 100%;
+    left: 0px;
+    top: 0;
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    min-height: 88px;
+}
+.header__logo {
+    padding-left: 5px;
+    padding-right: 15px;
+}
+.divider3 {
+    height: 32px;
+    width: 2px;
+    background-color: #EAEAEA;
+}
+.header_burger {
+    width: 40px;
+    height: 40px;
+    padding-left: 55px;
+    margin-left: 25px;
+    background-image: url("../img/burger.svg");
+    background-repeat: no-repeat;
+}
+.header__button {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    overflow: auto;
+    height: 40px;
+}
+.header__call {
+    width: 40px;
+    height: 40px;
+    padding-right: 55px; 
+    background-image: url("../img/call.svg");
+    background-repeat: no-repeat;
+}
+.header__chat {
+    padding-right: 55px;
+    background-image: url("../img/chat.svg");
+    background-repeat: no-repeat;
+}
+.header__profile {
+    padding-right: 55px;
+    background-image: url("../img/profile.svg");
+    background-repeat: no-repeat;
+}
+.divider1 {
+    height: 32px;
+    width: 2px;
+    background-color: #EAEAEA;
+    margin-right: 15px;
+}
+.header__repair {
+    padding-right: 55px;
+    background-image: url("../img/repair.svg");
+    background-repeat: no-repeat;
+}
+.header__search {
+    padding-right: 55px;
+    background-image: url("../img/search.svg");
+    background-repeat: no-repeat;
+}
+/*--------Осн Информация-------------------------------------------------------*/
+.main {
+    flex: 1 1 auto;
+}
+.get-started__container {
+    background-color: #F8F8F8;
+}
+.get-started__content {
+    height: 60px;
+    width: 1120px;
+}
+.get-started__name {
+    height: 60px;
+    width: 1120px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.block-text__title {
+    font-family: 'TTLakesBold';
+    font-size: 28px;
+    height: 40px;
+}
+.block-text__title::before {
+    content: '';
+    height: 40px;
+    width: 4px;
+    background-color: #41F6D7;  
+    display: inline-block;
+    margin: 0 16px 0 0;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+    top: 10px;
+}
+.get-started__button {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.get-started__brand {
+    display: none; 
+    width: 246px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    color: #7E7E82;
+}
+.get-started__devices {
+    display: block;
+    width: 246px;
+    border: 2px solid #B8FFEC;
+    background-color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    color: #7E7E82;
+}
+.get-started__addServices {
+    display: block;
+    width: 246px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    color: #7E7E82;
+}
+.get-started__price {
+    display: block;
+    width: 246px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    color: #7E7E82;
+}
+.get-started__address {
+    display: block;
+    width: 246px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    color: #7E7E82;
+}
+.get-started__specialPrices {
+    display: block;
+    width: 246px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    color: #7E7E82;
+}
+.get-started__reviews {
+    display: block;
+    width: 100px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    color: #7E7E82;
+}
+.get-started__text {
+    overflow: hidden;
+    padding: 20px 0 0 20px;
+    width: 320px;
+    height: 110px;
+    font-size: 15px;
+    line-height: 18px;
+}
+.get-started__readMore {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.get-started__icon {
+    margin-right: 10px;
+    display: block;
+}
+.get-started__icon::after {
+    content: 'Читать далее';
+    display: inline-block;
+    margin: 0 0 0 10px;
+    top: 0px;
+    font-size: 16px;
+    color: black;
+    font-family: 'TTLakesMed';
+}
+.get-started__image {
+    margin-top: 240px;
+    height: 176px;
+    width: 320px;
+}
+.footer {
+    height: 40px;
+}
+/*--------MOBILE---------------------------------------------------------
+@media (max-width: 320px) {
+    [class*="__container"] {
+        max-width: auto;
+    }
+}*/
+/*-----------TABLET--------------------------------------------------------*/
+@media (min-width: 768px) {
+    [class*="__container"] {
+        max-width: 1120px;
+    }
+    .header__logo {
+        padding-left: 20px;
+    }
+    .divider3 {
+        display: none;
+    }
+    .divider {
+        height: 32px;
+        width: 2px;
+        background-color: #EAEAEA;
+    }
+    .get-started__container {
+        width: 1120px;
+        height: 416px;
+        margin-left: 0;
+        background-color: #F8F8F8;
+        align-items: center;
+    }
+    .get-started__brand {
+        width: 248px;
+    }
+    .get-started__addServices {
+        width: 211px;
+    }
+    .get-started__price {
+        width: 143px;
+    }
+    .get-started__specialPrices {
+        width: 172px;
+    }
+    .get-started__address {
+        display: none;
+    }
+    .get-started__text {
+        white-space: pre-line;
+        padding-top: 20px;
+        padding-left: 20px;
+        width: 325px;
+        height: 180px;
+        font-size: 14px;
+    }
+    .get-started__image {
+        margin-top: 105px;
+        margin-left: 380px;
+        height: 208px;
+        width: 360px;
+    }
+    .get-started__image img{
+        height: 208px;
+        width: 360px;
+        border-radius: 5px;
+    }   
+}
+/*---------PC----------------------------------------------------------------*/
+@media (min-width: 1120px) {
+    [class*="__container"] {
+        max-width: 1200px;
+    }
+    .wrapper {
+        min-height: 1000px;
+        background-color: #F8F8F8;
+    }
+    .get-started__container {
+        width: 1200px;
+        height: 535px;
+        align-items: center;
+        margin: auto;
+    }
+    .header__container {
+        min-height: 30px;
+    }
+    .header__logo {
+        display: none;
+    }
+    .divider {
+        display: none;
+    }
+    .divider1 {
+        display: none;
+    }
+    .header_burger {
+        display: none;
+    }
+    .header__button {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header__call {
+        display: none; 
+    }
+    .header__chat {
+        display: none;
+    }
+    .header__profile {
+        display: none;
+    }
+    .header__repair {
+        display: none;
+    }
+    .header__search {
+        display: none;
+    }
+    .get-started__repair {
+        width: 40px;
+        height: 40px;
+        margin: 10px 0 0 580px;
+        background-image: url("../img/repair.svg");
+        background-repeat: no-repeat;
+    }
+    .get-started__search {
+        width: 40px;
+        height: 40px;
+        margin: 10px 0 0 160px;
+        background-image: url("../img/search.svg");
+        background-repeat: no-repeat;
+    }
+    .get-started__repair::before {
+        content: 'Оставить заявку';
+        display: inline-block;
+        margin: 0px 0px 0px -140px;
+        position: relative;
+        top: 10px;
+        font-size: 16px;
+        color: black;
+        font-family: 'TTLakesMed';
+    }
+    .get-started__search::before {
+        content: 'Статус ремонта';
+        display: inline-block;
+        margin: 0 0px 0 -130px;
+        position: relative;
+        top: 10px;
+        color: black;
+        font-size: 16px;
+        font-family: 'TTLakesMed';
+    }
+    .get-started__name {
+        height: 60px;
+        width: 1200px;
+    }
+    .get-started__button {
+        padding-top: 10px;
+        flex-wrap: wrap;
+    }
+    .get-started__brand {
+        display: block; 
+        width: 233px;
+        border: 2px solid #B8FFEC;
+        background-color: white;
+        padding: 10px 15px;
+        cursor: pointer;
+        text-align: center;
+        color: #7E7E82;
+        border-radius: 5px;
+    }
+    .get-started__devices {
+        width: 254px;
+        border: none;
+        background-color: #F8F8F8;
+    }
+    .get-started__addServices {
+        display: none;
+    }
+    .get-started__price {
+        width: 152px;
+    }
+    .get-started__address {
+        display: block;
+        width: 233px;
+        padding: 10px 15px;
+        cursor: pointer;
+        text-align: center;
+        color: #7E7E82;
+        
+    }
+    .get-started__specialPrices {
+        width: 191px;
+    }
+    .get-started__reviews {
+        display: block;
+        width: 95px;
+        padding: 10px 15px;
+        cursor: pointer;
+        text-align: center;
+        color: #7E7E82;
+    }   
+    .get-started__text {
+        white-space: pre-line;
+        padding-top: 0px;
+        padding-left: 30px;
+        width: 520px;
+        height: 160px;
+        font-size: 14px;
+    } 
+    .get-started__image {
+        margin-top: 100px;
+        margin-left: 550px;
+        height: 307px;
+        width: 532px;
+        border-radius: 10px;
+    }
+    .get-started__image img{
+        height: 307px;
+        width: 532px;
+        border-radius: 5px;
+    } 
+}
+
+
+
