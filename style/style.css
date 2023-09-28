@@ -117,6 +117,7 @@ body {
     height: 40px;
 }
 .header__call {
+    display: none;
     width: 40px;
     height: 40px;
     padding-right: 55px; 
@@ -124,11 +125,13 @@ body {
     background-repeat: no-repeat;
 }
 .header__chat {
+    display: none;
     padding-right: 55px;
     background-image: url("../img/chat.svg");
     background-repeat: no-repeat;
 }
 .header__profile {
+    display: none;
     padding-right: 55px;
     background-image: url("../img/profile.svg");
     background-repeat: no-repeat;
@@ -138,6 +141,7 @@ body {
     width: 2px;
     background-color: #EAEAEA;
     margin-right: 15px;
+    margin-top: 4px;
 }
 .header__repair {
     padding-right: 55px;
@@ -192,6 +196,7 @@ body {
     overflow-x: auto;
     padding-top: 20px;
     padding-left: 20px;
+    width: 100vw;
 }
 .get-started__brand {
     display: none; 
@@ -229,7 +234,7 @@ body {
     color: #7E7E82;
 }
 .get-started__address {
-    display: block;
+    display: none;
     width: 246px;
     padding: 10px 15px;
     cursor: pointer;
@@ -253,9 +258,11 @@ body {
     color: #7E7E82;
 }
 .get-started__text {
+    display: flex;
+    justify-content: flex-start;
     overflow: hidden;
-    padding: 20px 0 0 20px;
-    width: 320px;
+    padding: 20px 10px 0px 20px;
+    width: 100vw;
     height: 110px;
     font-size: 15px;
     line-height: 18px;
@@ -263,27 +270,33 @@ body {
 .get-started__readMore {
     display: flex;
     flex-direction: row;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 20px;
     padding-bottom: 20px;
 }
 .get-started__icon {
-    margin-right: 10px;
-    display: block;
-}
-.get-started__icon::after {
-    content: 'Читать далее';
-    display: inline-block;
-    margin: 0 0 0 10px;
-    top: 0px;
+    font-family: 'TTLakesMed';
     font-size: 16px;
     color: black;
-    font-family: 'TTLakesMed';
+}
+.get-started__icon::before {
+    content: '';
+    height: 24px;
+    width: 24px;
+    margin-right: 10px;
+    display: inline-block;
+    background-image: url("../img/expand.svg");
+    background-repeat: no-repeat;
+    position: relative;
+    top: 5px;
 }
 .get-started__image {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
     margin-top: 240px;
-    height: 176px;
-    width: 320px;
+    height: 31vh;
+    width: 100vw;
 }
 .footer {
     height: 40px;
@@ -297,7 +310,7 @@ body {
 /*-----------TABLET--------------------------------------------------------*/
 @media (min-width: 768px) {
     [class*="__container"] {
-        max-width: 1120px;
+        max-width: 1119px;
     }
     .header__logo {
         padding-left: 20px;
@@ -310,10 +323,18 @@ body {
         width: 2px;
         background-color: #EAEAEA;
     }
+    .header__call {
+        display: block;
+    }
+    .header__chat {
+        display: block;
+    }
+    .header__profile {
+        display: block;
+    }
     .get-started__container {
         width: 1120px;
         height: 416px;
-        margin-left: 0;
         background-color: #F8F8F8;
         align-items: center;
     }
@@ -321,12 +342,15 @@ body {
         width: 248px;
     }
     .get-started__addServices {
+        display: block;
         width: 211px;
     }
     .get-started__price {
+        display: block;
         width: 143px;
     }
     .get-started__specialPrices {
+        display: block;
         width: 172px;
     }
     .get-started__address {
@@ -336,19 +360,18 @@ body {
         white-space: pre-line;
         padding-top: 20px;
         padding-left: 20px;
-        width: 325px;
+        width: 43vw;
         height: 180px;
         font-size: 14px;
     }
     .get-started__image {
+        display: flex;
         margin-top: 105px;
-        margin-left: 380px;
-        height: 208px;
-        width: 360px;
+        padding-left: 360px;
+        height: 40vh;
+        width: 100vw;
     }
     .get-started__image img{
-        height: 208px;
-        width: 360px;
         border-radius: 5px;
     }   
 }
@@ -442,6 +465,7 @@ body {
     .get-started__button {
         padding-top: 10px;
         flex-wrap: wrap;
+        width: 1120px;
     }
     .get-started__brand {
         display: block; 
@@ -494,8 +518,10 @@ body {
         font-size: 14px;
     } 
     .get-started__image {
+        justify-content: flex-start;
         margin-top: 100px;
         margin-left: 550px;
+        padding-left: 0px;
         height: 307px;
         width: 532px;
         border-radius: 10px;
