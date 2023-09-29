@@ -296,6 +296,7 @@ body {
     overflow: hidden;
     margin-top: 240px;
     height: 31vh;
+    max-height: 190px;
     width: 100vw;
 }
 .footer {
@@ -367,8 +368,9 @@ body {
     .get-started__image {
         display: flex;
         margin-top: 105px;
-        padding-left: 360px;
+        padding-left: 350px;
         height: 40vh;
+        max-height: 250px;
         width: 100vw;
     }
     .get-started__image img{
@@ -523,6 +525,7 @@ body {
         margin-left: 550px;
         padding-left: 0px;
         height: 307px;
+        max-height: 307px;
         width: 532px;
         border-radius: 10px;
     }
